@@ -1,0 +1,20 @@
+{
+	"version":	1
+	"title":	"数据科学与工程导论实验一"
+	"author":	"teacher"
+	"description":	"ECNU DaSE 数据科学与工程导论课程实验"
+	"scenarios":	[
+		{
+			"title":	"实验一：Git与Python基础"
+			"pre":	"pre.sh"
+			"steps":[
+				{
+					"title":	"text"
+					"text" :	"setup/lab_1.md"
+				}
+				
+			]
+
+		}
+	]
+}
