@@ -1,19 +1,28 @@
 # Git与Python基础
 
-##实验目的
-### 1.掌握Python的基本程序结构，能够正确的书写并运行Python程序。
-### 2.掌握Git的基本用法，能够用Git命令将程序文件和数据文件存放到Github的仓库中。
-##实验内容
-###1.编写并运行第一个Python程序。
-###2.利用Git命令将python文件上传到仓库中。
+##  实验目的
 
-##实验步骤和结果
+### 1.掌握Python的基本程序结构，能够正确的书写并运行Python程序。
+
+### 2.掌握Git的基本用法，能够用Git命令将程序文件和数据文件存放到Github的仓库中。
+
+## 实验内容
+
+### 1.编写并运行第一个Python程序。
+
+### 2.利用Git命令将python文件上传到仓库中。
+
+## 实验步骤和结果
+
 ![pic1](pic/pic1.png)
 ![pic2](pic/pic2.png)
-###实验一：统计字符串中单词出现次数
+
+## 实验一：统计字符串中单词出现次数
+
 大数据版的“Hello World”程序就是字符统计啦。我们任务很简单，给定一个字符串列表，我们需要统计字符串列表中每种字符串出现次数。
 ![pic3](pic/pic3.png)
-####[参考代码]
+
+### [参考代码]
 
 ```
 def wordCount(data):
@@ -28,26 +37,34 @@ if __name__ == "__main__":
 
 ```
 
-####[执行结果]
+### [执行结果]
+
 ```The result is {'d': 2, 'ab': 2, 'cd': 1}```
 
-####[疑点解释]
+### [疑点解释]
+
 * get()函数：
 该函数的方法语法为 dict.get(key,defult=None)，其中key是字典中要查找的键，defult为如果如果指定键的值不存在时，返回该默认值值。
 
 * ```if __name__ == '__main__' ```又是什么呢？
 当.py文件被直接运行时，```if __name__ == '__main__'```之下的代码块将被运行；当.py文件以模块形式被导入时，```if __name__ == '__main__'```之下的代码块不被运行。
 
-###实验二：
+### 实验二：
+
 安装Git(仅供课下练习使用，课上只需从配置用户名和邮箱开始执行)
 
 * Ubuntu安装
-```sudo apt-get install git
 
-```
+  ```
+  sudo apt-get install git
+  ```
+* Windows安装https://git-scm.com/downloads
 
-* Windows安装
-```https://git-scm.com/downloads```
+  ```
+  https://git-scm.com/downloads
+  ```
+
+  
 
 安装完成后，在开始菜单里找到“Git”->“Git Bash”，跳出一个类似命令行窗口的东西，就说明Git安装成功！
 从这里开始输入你的命令
