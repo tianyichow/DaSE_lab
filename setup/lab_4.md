@@ -1,34 +1,42 @@
-#Python程序性能评测
-##实验目的
+# Python程序性能评测
+
+## 实验目的
+
 1、利用python采集与分析cpu,memory,disk的信息;
 2、python performance基准测试
-##实验内容
+
+## 实验内容
+
 1、python获取机器的常用配置信息
 2、python获取程序执行时间
-##实验步骤和结果
-###实验一 python获取机器的常用配置信息
+
+## 实验步骤和结果
+
+### 实验一 python获取机器的常用配置信息
+
 [实验内容]
 用python的psutil模块输出cpu,memory,disk信息
 	
+
 	import psutil as ps
 	metrics = {}
-​
-####cpu
+#### cpu
+
 	cpu = ps.cpu_times()
 	metrics['cpu_usage'] = ps.cpu_percent(interval = 1)
 	metrics['cpu_user'] = cpu.user
 	metrics['cpu_system'] = cpu.system
 	metrics['cpu_idle'] = cpu.idle
-​
-####Memory
+#### Memory
+
 	mem = ps.virtual_memory()
 	metrics['mem_free'] = mem.free
 	metrics['mem_used'] = mem.used
 	metrics['mem_available'] = mem.available
 	metrics['mem_usage'] = mem.percent
-​
-​
-####Disk
+#### Disk
+
+
 
 ```
 disk = ps.disk_io_counters(perdisk=True)
@@ -83,7 +91,8 @@ for item in metrics.items():
 ```
 
 获取的本地信息，每个人结果一般不同
-###实验二 python获取程序执行时间
+### 实验二 python获取程序执行时间
+
 四种替换算法时间性能比较
 
 ```
@@ -93,7 +102,7 @@ orignal_str = "Profiling a Python program is doing a dynamic analysis"\
 exec_times = 100000   #执行次数
 ```
 
-####四种替换算法
+#### 四种替换算法
 
 ```
 def slowest_replace():
@@ -120,7 +129,7 @@ def fastest_replace():
     return orignal_str.replace(" ", "-")
 ```
 
-#####手动设置时间断点分析函数执行时间
+#### 手动设置时间断点分析函数执行时间
 
 ```
 def _time_analyze_(func):
@@ -137,8 +146,7 @@ def simple_profile():
     for fun in [slowest_replace, slow_replace, fast_replace, fastest_replace]:
         _time_analyze_(fun)
 ```
-​
-#####用python的timeit模块分析函数执行时间
+#### 用python的timeit模块分析函数执行时间
 
 
 ```
@@ -175,12 +183,14 @@ slow_replace : 1.2700494629971217
 fast_replace : 0.14182965198415332
 fastest_replace : 0.030810013005975634
 ```
-###实验三 python程序可视化分析
+### 实验三 python程序可视化分析
+
 [实验内容]
 我选择一个开源的性能分析工具vprof，原因是它可以很方便地生成火焰图。火焰图是类似下面的图形，具体了解火焰图，可以访问《如何读懂火焰图》这篇文章。
 http://www.ruanyifeng.com/blog/2017/09/flame-graph.html
 安装vprof很简单，使用下面这个命令：
 	
+
 	pip install vprof
 
 收集性能数据可以使用如下命令：
@@ -192,7 +202,8 @@ http://www.ruanyifeng.com/blog/2017/09/flame-graph.html
 ​​![](pic/4.1.png)
 ​​![](pic/4.2.png)
 ​​
-##作业
+#### 作业
+
 1、比较常用排序算法（冒泡排序、选择排序、插入排序，归并排序）的时间性能。
 提示：
 （1）python 中可以引入time模块，使用time.time()获取当前计算机时间。
@@ -232,5 +243,5 @@ def merge_sort(nums):
 ```
 （3）比较排序算法需要使用较长的无序数组，尝试使用100，1000，10000三种不同长度的无序数组进行测试，输出每次测试不同排序算法的运行时间。
 
-​
+
 

@@ -1,12 +1,12 @@
-#建模与分析
+# 建模与分析
 
-##实验目的
+## 实验目的
 
 1、了解数据的全生命周期
 
 2、在对数据进行预处理之后能够利用相关机器学习算法进行建模，对数据集进行分析和预测。
 
-##实验背景
+## 实验背景
 
 在继实训8做完泰坦尼克号项目的数据预处理部分之后，得到了清洗干净并做好特征工程的数据集，接下来要对数据集进行建模，分析预测遇难人员是生存还是死亡。
 
@@ -22,9 +22,11 @@ https://blog.csdn.net/han_xiaoyang/article/details/49123419
 
 1、设计合适的损失函数，在这里我们基于最大似然函数来设计我们的损失函数。简单解释一下（假设你已经大致看过上面的博客并对逻辑回归有了简单的认识），我们将我们的计算结果通过sigmod转化到[0,1]的区间，可以理解为所属类别的概率。那么对于我们的m个样本点，我们希望我们的模型能够使得所有样本点的预测结果属于真实类别的概率最大，所以通过最大似然估计得到公式如下。
 
-![http://kfcoding.oss-cn-hangzhou.aliyuncs.com/db567d072c704838946c565e5fc08ddb/resources/1543303316403.png](file://localhost/Users/TIanyi/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image002.png)
+![pic](pic/9.1.png)
 
-![http://kfcoding.oss-cn-hangzhou.aliyuncs.com/db567d072c704838946c565e5fc08ddb/resources/1543303751572.png](file://localhost/Users/TIanyi/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image004.png)
+![pic](pic/9.2.png)
+
+
 
 2、使用优化算法来求解能最大化log-likelihood函数的w参数值。如梯度下降（上升）算法和牛顿法，这里我们使用梯度算法。我们需要记住的是，我们的log-likelihood函数是参数w的函数，我们通过不断迭代计算调整参数的取值来更新我们的参数（模型）。下面的链接是对梯度下降（上升）算法的介绍。
 
@@ -252,7 +254,7 @@ storeResult()
 
 __实验结果__
 
-![http://kfcoding.oss-cn-hangzhou.aliyuncs.com/db567d072c704838946c565e5fc08ddb/resources/1543228041831.png](file://localhost/Users/TIanyi/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image006.png)
+![pic](pic/9.3.png)
 
 ## 课后作业
 

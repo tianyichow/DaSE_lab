@@ -1,8 +1,6 @@
-#数据的全生命周期
+# 数据的全生命周期
 
 ## 实验目的
-
-
 
 了解数据的全生命周期
 
@@ -174,13 +172,15 @@ g.map(plt.hist, 'Age', bins = 20)  #建立数据集中两个子集之间的对�
 
 ![pic](pic/8.9.png)
 
+```python
 grid = sns.FacetGrid(train_df, row='Embarked', size=2.2, aspect=1.6)
 
 grid.map(sns.pointplot, 'Pclass', 'Survived', 'Sex', palette='deep')
 
 grid.add_legend()
+```
 
-#探索Embarked和survived之间的影响关系
+#### 探索Embarked和survived之间的影响关系
 
 ![pic](pic/8.10.png)
 
@@ -188,14 +188,19 @@ grid.add_legend()
 
 '''文本特征处理：文本统计特征'''
 
+```
 for dataset in combine:
 
 ​    dataset['Title'] = dataset.Name.str.extract('([A-Za-z]+)\.',expand=False)
 
 pd.crosstab(train_df['Title'], train_df['Sex'])  #找出每个name缩写的人数
+```
 
-![http://kfcoding.oss-cn-hangzhou.aliyuncs.com/db567d072c704838946c565e5fc08ddb/resources/1542718496957.png](file://localhost/Users/TIanyi/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image022.png)
 
+
+![pic](pic/8.11.png)
+
+```python
 '''文本特征，类似于特征的融合'''
 
 for dataset in combine:  #替换和融合原来特征,并且生成新的特征,然后按照某一特征进行分类
@@ -210,12 +215,14 @@ for dataset in combine:  #替换和融合原来特征,并且生成新的特征,�
 
 train_df[['Title', 'Survived']].groupby(['Title'], as_index=False).mean()
 
-
+
+```
 
 将原始数据中稀少的数据统一用rare替换
 
 '''类别特征：自然数编码，此外比较常用的还有one-hot编码'''
 
+```python
 title_mapping = {'Mr':1, 'Miss':2, 'Mrs':3, 'Rare':4}
 
 for dataset in  combine:
@@ -226,12 +233,18 @@ for dataset in  combine:
 
 train_df.head()  #将非数值型特征转换为数值型特征
 
+
+```
+
+
+
 
 
-![http://kfcoding.oss-cn-hangzhou.aliyuncs.com/db567d072c704838946c565e5fc08ddb/resources/1542718690152.png](file://localhost/Users/TIanyi/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image024.png)
+![pic](pic/8.12.png)
 
 将Mr变换为1，Miss变换为2，Mrs变换为3，Rare变换为4。并将所有是缺失值的用0填充。
 
+```python
 train_df = train_df.drop(['Ticket'], axis=1)
 
 test_df = test_df.drop(['Name'], axis=1)
@@ -249,13 +262,15 @@ for dataset in combine:
 ​    dataset['Sex'] = dataset['Sex'].map({'female':1, 'male':0}).astype(int)
 
 train_df.head()  #利用map函数直接将非数值型数值转换为数值型数据
+```
 
-
 
-![http://kfcoding.oss-cn-hangzhou.aliyuncs.com/db567d072c704838946c565e5fc08ddb/resources/1542718946881.png](file://localhost/Users/TIanyi/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image026.png)
+
+![pic](pic/8.13.png)
 
 将所有数据的性别信息用自然数1，2进行编码
 
+```python
 '''数值特征处理：分桶'''
 
 train_df['AgeBand'] = pd.cut(train_df['Age'], 5) #将年龄均分成5个年龄段
@@ -264,13 +279,11 @@ train_df['AgeBand'] = pd.cut(train_df['Age'], 5) #将年龄均分成5个年龄�
 
 train_df[['AgeBand', 'Survived']].groupby(['AgeBand'], as_index=False).mean().sort_values(by='AgeBand', ascending=True)
 
-\#计算各个年龄段的存活率,按照年龄段升序排序
+#计算各个年龄段的存活率,按照年龄段升序排序
 
 train_df[['Pclass', 'Survived']].groupby(['Pclass'], as_index=False).mean().sort_values(by='Survived', ascending=True)
 
-
-
-\#用序号来代替每个年龄段
+#用序号来代替每个年龄段
 
 '''数值处理分桶——>自然数编码'''
 
@@ -287,29 +300,32 @@ for dataset in combine:
 ​    dataset.loc[ dataset['Age'] > 64, 'Age']
 
 train_df.head()
+```
 
-
+![pic](pic/8.14.png)
 
-![http://kfcoding.oss-cn-hangzhou.aliyuncs.com/db567d072c704838946c565e5fc08ddb/resources/1542719177045.png](file://localhost/Users/TIanyi/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image028.png)
+```python
 
-\#删除掉AgeBend特征
+
+ #删除掉AgeBend特征
 
 train_df = train_df.drop(['AgeBand'], axis=1)
 
 '''数值处理：特征交叉'''
-
-\#组合现有的特征,融合成新的特征
+#组合现有的特征,融合成新的特征
 
 for dataset in combine:
 
 ​    dataset['FamilySize'] = dataset['SibSp'] + dataset['Parch'] + 1  #将SlibSp,Parch合成一列
 
 train_df[['Survived', 'FamilySize']].groupby(['FamilySize'], as_index=False).mean().sort_values(by='Survived', ascending=False)
+```
 
-
 
-![http://kfcoding.oss-cn-hangzhou.aliyuncs.com/db567d072c704838946c565e5fc08ddb/resources/1542719335951.png](file://localhost/Users/TIanyi/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image030.png)
 
+![pic](pic/8.15.png)
+
+```python
 '''数值处理：缩放'''
 
 \#融合新的特征 是否独自乘船
@@ -321,12 +337,14 @@ for dataset in combine:
 ​    dataset.loc[dataset['FamilySize'] ==1, 'IsAlone'] = 1
 
 train_df[['IsAlone', 'Survived']].groupby(['IsAlone'], as_index = False).mean()
+```
 
-
 
-![http://kfcoding.oss-cn-hangzhou.aliyuncs.com/db567d072c704838946c565e5fc08ddb/resources/1542719402320.png](file://localhost/Users/TIanyi/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image032.png)
 
-\#将SibSp,Parch和FamilySize融合成一列IsAlone
+![pic](pic/8.16.png)
+
+```python
+# 将SibSp,Parch和FamilySize融合成一列IsAlone
 
 train_df = train_df.drop(['SibSp', 'Parch', 'FamilySize'], axis=1)
 
@@ -335,11 +353,13 @@ test_df = test_df.drop(['SibSp', 'Parch', 'FamilySize'], axis=1)
 combine = [train_df, test_df]
 
 train_df.head(6)
+```
 
-
 
-![http://kfcoding.oss-cn-hangzhou.aliyuncs.com/db567d072c704838946c565e5fc08ddb/resources/1542719469798.png](file://localhost/Users/TIanyi/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image034.png)
 
+![pic](pic/8.17.png)
+
+```python
 '''数值处理：特征交叉'''
 
 \#直接对现有特征进行加减乘除生成新的特征
@@ -351,10 +371,14 @@ for dataset in combine:
 ​    dataset['Age*Pclass'] = dataset.Age * dataset.Pclass
 
 train_df.loc[:,['Age*Pclass', 'Age', 'Pclass']].head(10)
+```
 
-
 
-![http://kfcoding.oss-cn-hangzhou.aliyuncs.com/db567d072c704838946c565e5fc08ddb/resources/1542719537741.png](file://localhost/Users/TIanyi/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image036.png)
+
+![pic](pic/8.18.png)
+
+```python
+
 
 '''数值处理：缺失值处理，用频率最高的替代缺失值'''
 
@@ -365,11 +389,11 @@ for dataset in combine:
 ​    dataset['Embarked'] = dataset['Embarked'].fillna(freq_port)  #用最高频率值替代缺失值
 
 train_df[['Embarked', 'Survived']].groupby(['Embarked'], as_index=False).mean().sort_values(by='Survived', ascending=False)
+```
 
-
+![pic](pic/8.19.png)
 
-![http://kfcoding.oss-cn-hangzhou.aliyuncs.com/db567d072c704838946c565e5fc08ddb/resources/1542719647865.png](file://localhost/Users/TIanyi/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image038.png)
-
+```python
 '''类别特征：自然编码'''
 
 \#把分类要素转换为数字
@@ -379,11 +403,13 @@ for dataset in combine:
 ​    dataset['Embarked'] = dataset['Embarked'].map({'S':0, 'C':1, 'Q':2}).astype(int)
 
 train_df.head()
+```
 
-
 
-![http://kfcoding.oss-cn-hangzhou.aliyuncs.com/db567d072c704838946c565e5fc08ddb/resources/1542719729836.png](file://localhost/Users/TIanyi/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image040.png)
 
+![pic](pic/8.20.png)
+
+```python
 test_df['Fare'].fillna(test_df['Fare'].dropna().median(), inplace=True)
 
 '''数值处理：分桶—->自然编码（one-hot编码）'''
@@ -391,12 +417,12 @@ test_df['Fare'].fillna(test_df['Fare'].dropna().median(), inplace=True)
 train_df['FareBand'] = pd.qcut(train_df['Fare'], 4)
 
 train_df[['FareBand', 'Survived']].groupby(['FareBand'], as_index=False).mean().sort_values(by='FareBand', ascending=True)
+```
 
-
+![pic](pic/8.21.png)
 
-![http://kfcoding.oss-cn-hangzhou.aliyuncs.com/db567d072c704838946c565e5fc08ddb/resources/1542719853674.png](file://localhost/Users/TIanyi/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image042.png)
-
-\#将Fare按区间分成四段之后映射成4个数字
+```python
+# 将Fare按区间分成四段之后映射成4个数字
 
 for dataset in combine:
 
@@ -419,17 +445,18 @@ combine = [train_df, test_df]
 ​    
 
 train_df.head(10)
+```
 
-
 
-![http://kfcoding.oss-cn-hangzhou.aliyuncs.com/db567d072c704838946c565e5fc08ddb/resources/1542719919405.png](file://localhost/Users/TIanyi/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image044.png)
+
+![pic](pic/8.22.png)
 
 ```python
 test_df = test_df.drop('Survived', axis=1)
 train_df.head()
 ```
 
-![http://kfcoding.oss-cn-hangzhou.aliyuncs.com/db567d072c704838946c565e5fc08ddb/resources/1542719990311.png](file://localhost/Users/TIanyi/Library/Group%20Containers/UBF8T346G9.Office/msoclip1/01/clip_image046.png)
+![pic](pic/8.23.png)
 
 至此，恭喜你已经学会了对于数据初步的特征工程处理，可以将数据直接导入到机器学习的相关模型中进行训练，怎么样用模型训练数据会在下一节课介绍。
 
