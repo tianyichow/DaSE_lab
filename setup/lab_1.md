@@ -1,4 +1,5 @@
-#Git与Python基础
+# Git与Python基础
+
 ##实验目的
 ### 1.掌握Python的基本程序结构，能够正确的书写并运行Python程序。
 ### 2.掌握Git的基本用法，能够用Git命令将程序文件和数据文件存放到Github的仓库中。
@@ -42,6 +43,7 @@ if __name__ == "__main__":
 
 * Ubuntu安装
 ```sudo apt-get install git
+
 ```
 
 * Windows安装
