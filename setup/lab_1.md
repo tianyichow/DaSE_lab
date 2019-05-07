@@ -17,6 +17,8 @@
 ![pic1](https://github.com/tianyichow/DaSE_lab/raw/master/setup/pic/pic1.png =200x100)
 ![pic2](https://github.com/tianyichow/DaSE_lab/raw/master/setup/pic/pic2.png =100x200)
 
+<img src="https://github.com/tianyichow/DaSE_lab/raw/master/setup/pic/pic2.png" style="width:500px;"/>
+
 ## 实验一：统计字符串中单词出现次数
 
 大数据版的“Hello World”程序就是字符统计啦。我们任务很简单，给定一个字符串列表，我们需要统计字符串列表中每种字符串出现次数。
