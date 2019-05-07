@@ -1,4 +1,4 @@
-# 神经网络
+# 实验十(二) 神经网络
 
 ## 实验目的
 
@@ -108,7 +108,7 @@ def layer_sizes(X, Y):
 下面这个函数用于随机初始化每个层神经元的参数，随机初始化参数之后，我们的整个网络可以看作一个高维空间中的随便的一个决策边界。
 
  ```python
-\# GRADED FUNCTION: initialize_parameters
+# GRADED FUNCTION: initialize_parameters
 
 def initialize_parameters(n_x, n_h, n_y):
 
@@ -164,7 +164,7 @@ def initialize_parameters(n_x, n_h, n_y):
 下面这个函数定义了前向传播计算过程，通过numpy的矩阵计算工具进行计算。计算结果保存在cache中，因为反向传播计算梯度时需要使用这些参数。
 
  ```python
-\# GRADED FUNCTION: forward_propagation
+# GRADED FUNCTION: forward_propagation
 
  
 
@@ -188,7 +188,7 @@ def forward_propagation(X, parameters):
 
 ​    """
 
-​    \# Retrieve each parameter from the dictionary "parameters"
+​    # Retrieve each parameter from the dictionary "parameters"
 
 ​    W1 = parameters["W1"]
 
@@ -198,7 +198,7 @@ def forward_propagation(X, parameters):
 
 ​    b2 = parameters["b2"]
 
-​    \# Implement Forward Propagation to calculate A2 (probabilities)
+​    # Implement Forward Propagation to calculate A2 (probabilities)
 
 ​    Z1 = np.dot(W1, X) + b1
 
@@ -230,7 +230,7 @@ def forward_propagation(X, parameters):
  
 
  ```python
-\# GRADED FUNCTION: compute_cost
+# GRADED FUNCTION: compute_cost
 
  
 
@@ -264,7 +264,7 @@ def compute_cost(A2, Y, parameters):
 
  
 
-​    \# Compute the cross-entropy cost
+​    # Compute the cross-entropy cost
 
 ​    logprobs = np.multiply(np.log(A2), Y) + np.multiply(np.log(1-A2), (1-Y))
 
@@ -288,7 +288,7 @@ def compute_cost(A2, Y, parameters):
 下面的函数计算了神经网络中每一层的梯度
 
 ```python
-\# GRADED FUNCTION: backward_propagation
+# GRADED FUNCTION: backward_propagation
 
  
 
@@ -322,7 +322,7 @@ def backward_propagation(parameters, cache, X, Y):
 
 ​    
 
-​    \# First, retrieve W1 and W2 from the dictionary "parameters".
+​    # First, retrieve W1 and W2 from the dictionary "parameters".
 
 ​    W1 = parameters["W1"]
 
@@ -332,7 +332,7 @@ def backward_propagation(parameters, cache, X, Y):
 
 ​        
 
-​    \# Retrieve also A1 and A2 from dictionary "cache".
+​    # Retrieve also A1 and A2 from dictionary "cache".
 
  
 
@@ -342,7 +342,7 @@ def backward_propagation(parameters, cache, X, Y):
 
 ​    
 
-​    \# Backward propagation: calculate dW1, db1, dW2, db2. 
+​    # Backward propagation: calculate dW1, db1, dW2, db2. 
 
  
 
@@ -375,8 +375,8 @@ def backward_propagation(parameters, cache, X, Y):
 
 根据梯度下降算法，我们将每一层神经网络中的参数减去它的梯度和学习率的乘积，完成参数更新。
 
-```
-\# GRADED FUNCTION: update_parameters
+```python
+# GRADED FUNCTION: update_parameters
 
  
 
@@ -402,7 +402,7 @@ def update_parameters(parameters, grads, learning_rate = 1.2):
 
 ​    """
 
-​    \# Retrieve each parameter from the dictionary "parameters"
+​    # Retrieve each parameter from the dictionary "parameters"
 
 ​    W1 = parameters["W1"]
 
@@ -414,7 +414,7 @@ def update_parameters(parameters, grads, learning_rate = 1.2):
 
 ​    
 
-​    \# Retrieve each gradient from the dictionary "grads"
+​    # Retrieve each gradient from the dictionary "grads"
 
 ​    dW1 = grads["dW1"]
 
@@ -426,7 +426,7 @@ def update_parameters(parameters, grads, learning_rate = 1.2):
 
 ​    
 
-​    \# Update rule for each parameter
+​    # Update rule for each parameter
 
 ​    W1 -= learning_rate * dW1
 
@@ -456,7 +456,7 @@ def update_parameters(parameters, grads, learning_rate = 1.2):
 训练需要经过多次迭代才能收敛，每次迭代包括前向传播、计算损失和后向传播三个过程。训练结束后，我们得到神经网络中的最优参数。
 
 ```python
-\# GRADED FUNCTION: nn_model
+# GRADED FUNCTION: nn_model
 
  
 
@@ -490,7 +490,7 @@ def nn_model(X, Y, n_h, num_iterations = 10000, print_cost=False):
 
 ​    
 
-​    \# Initialize parameters, then retrieve W1, b1, W2, b2. Inputs: "n_x, n_h, n_y". Outputs = "W1, b1, W2, b2, parameters".
+​    # Initialize parameters, then retrieve W1, b1, W2, b2. Inputs: "n_x, n_h, n_y". Outputs = "W1, b1, W2, b2, parameters".
 
 ​    parameters = initialize_parameters(n_x, n_h, n_y)
 
@@ -504,7 +504,7 @@ def nn_model(X, Y, n_h, num_iterations = 10000, print_cost=False):
 
 ​    
 
-​    \# Loop (gradient descent)
+​    # Loop (gradient descent)
 
  
 
@@ -532,7 +532,7 @@ def nn_model(X, Y, n_h, num_iterations = 10000, print_cost=False):
 ```python
 
 
-\# GRADED FUNCTION: predict
+# GRADED FUNCTION: predict
 
  
 
@@ -560,7 +560,7 @@ def predict(parameters, X):
 
 ​    
 
-​    \# Computes probabilities using forward propagation, and classifies to 0/1 using 0.5 as the threshold.
+​    # Computes probabilities using forward propagation, and classifies to 0/1 using 0.5 as the threshold.
 
 ​    A2, cache = forward_propagation(X, parameters)
 
@@ -570,13 +570,13 @@ def predict(parameters, X):
 
 
 
-\# Build a model with a n_h-dimensional hidden layer
+# Build a model with a n_h-dimensional hidden layer
 
 parameters = nn_model(X, Y, n_h = 4, num_iterations = 10000, print_cost=True)
 
  
 
-\# Plot the decision boundary
+# Plot the decision boundary
 
 plot_decision_boundary(lambda x: predict(parameters, x.T), X, Y)
 

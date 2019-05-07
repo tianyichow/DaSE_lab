@@ -1,6 +1,6 @@
 {
 	"version":	1,
-	"title":"数据科学与工程导论实验一",
+	"title":"数据科学与工程导论实验",
 	"author":	"teacher",
 	"description":	"ECNU DaSE 数据科学与工程导论课程实验",
 	"scenarios":	[
@@ -9,31 +9,33 @@
 			"pre":	"pre.sh",
 			"steps":[
 				{
-					"title":	"text",
+					"title":	" ",
 					"text" :	"setup/lab_1.md"
 				}
 				
 			]
 
 		},
+
 		{
 			"title":	"实验二：数据思维与问题求解",
-			"pre":	"pre.sh",
+			
 			"steps":[
 				{
-					"title":	"text",
+					"title":	" ",
 					"text" :	"setup/lab_2.md"
 				}
 				
 			]
 
 		},
+
 		{
 			"title":	"实验三：数据处理与基本操作",
-			"pre":	"pre.sh",
+			
 			"steps":[
 				{
-					"title":	"text",
+					"title":	" ",
 					"text" :	"setup/lab_3.md"
 				}
 				
@@ -42,10 +44,10 @@
 		},
 		{
 			"title":	"实验四：程序性能分析",
-			"pre":	"pre.sh",
+			
 			"steps":[
 				{
-					"title":	"text",
+					"title":	" ",
 					"text" :	"setup/lab_4.md"
 				}
 				
@@ -55,10 +57,10 @@
 
 		{
 			"title":	"实验五：数据采集与存储",
-			"pre":	"pre.sh",
+			
 			"steps":[
 				{
-					"title":	"text",
+					"title":	" ",
 					"text" :	"setup/lab_5.md"
 				}
 				
@@ -68,10 +70,10 @@
 
 		{
 			"title":	"实验六：数据库基础",
-			"pre":	"pre.sh",
+			
 			"steps":[
 				{
-					"title":	"text",
+					"title":	" ",
 					"text" :	"setup/lab_6.md"
 				}
 				
@@ -81,10 +83,10 @@
 
 		{
 			"title":	"实验七：Git与Python基础",
-			"pre":	"pre.sh",
+			
 			"steps":[
 				{
-					"title":	"text",
+					"title":	" ",
 					"text" :	"setup/lab_7.md"
 				}
 				
@@ -93,10 +95,10 @@
 		},
 		{
 			"title":	"实验八：数据的全生命周期",
-			"pre":	"pre.sh",
+			
 			"steps":[
 				{
-					"title":	"text",
+					"title":	" ",
 					"text" :	"setup/lab_8.md"
 				}
 				
@@ -105,10 +107,10 @@
 		},
 		{
 			"title":	"实验九：数据建模与分析",
-			"pre":	"pre.sh",
+			
 			"steps":[
 				{
-					"title":	"text",
+					"title":	" ",
 					"text" :	"setup/lab_9.md"
 				}
 				
@@ -118,10 +120,10 @@
 
 		{
 			"title":	"实验十(1)：分类与聚类",
-			"pre":	"pre.sh",
+			
 			"steps":[
 				{
-					"title":	"text",
+					"title":	" ",
 					"text" :	"setup/lab_10.1.md"
 				}
 				
@@ -130,10 +132,10 @@
 		},
 		{
 			"title":	"实验十(2)：神经网络基础",
-			"pre":	"pre.sh",
+			
 			"steps":[
 				{
-					"title":	"text",
+					"title":	" ",
 					"text" :	"setup/lab_10.2.md"
 				}
 				

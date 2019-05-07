@@ -1,4 +1,4 @@
-# 建模与分析
+# 实验九 建模与分析
 
 ## 实验目的
 
@@ -71,7 +71,7 @@ def classify(inX,weights):
 
 ​    prediction = sigmoid(sum(inX * weights))
 
-​    \#print ("prediction",prediction)
+​    #print ("prediction",prediction)
 
 ​    if prediction>0.5:
 
@@ -117,7 +117,7 @@ def error_function(X,theta,Y):
 
 ​    diff = X*theta -Y.T
 
-​    \#print ('diff',diff.shape)
+​    #print ('diff',diff.shape)
 
 ​    t = diff.T*diff
 
@@ -143,31 +143,31 @@ def gradAscent(dataMat,labelMat,alpha=0.001,maxCycles=500):
 
 ​    errors=[]
 
-​    \#循环迭代次数
+​    #循环迭代次数
 
 ​    for k in range(maxCycles):
 
-​        \#求当前的sigmoid函数预测概率
+​        #求当前的sigmoid函数预测概率
 
 ​        h=sigmoid(dataMat*weights)
 
-​        \#***********************************************
+​        #***********************************************
 
-​        \#此处计算真实类别和预测类别的差值
+​        #此处计算真实类别和预测类别的差值
 
-​        \#对logistic回归函数的对数释然函数的参数项求偏导
+​        #对logistic回归函数的对数释然函数的参数项求偏导
 
 ​        error=(labelMat.T-h)
 
-​        \#更新权值参数                                                     
+​        #更新权值参数                                                     
 
 ​        weights=weights+alpha*dataMat.transpose()*error
 
-​        \#***********************************************
+​        #***********************************************
 
 ​        err = error_function(dataMat,weights,labelMat)
 
-​        \#print("err",err)
+​        #print("err",err)
 
 ​        errors.append(float(err))
 

@@ -1,4 +1,4 @@
-# 分类与聚类
+# 实验十(一) 分类与聚类
 
 ## 实验目的
 
@@ -43,7 +43,7 @@ warnings.filterwarnings('ignore')
 
  
 
-\# 导入数据集
+# 导入数据集
 
 iris = datasets.load_iris() 
 
@@ -51,7 +51,7 @@ lg = linear_model.LogisticRegression(multi_class='ovr') # 采用 one-vs-rest 的
 
 predicted = model_selection.cross_val_predict(lg, iris.data, iris.target, cv=5) # 5个KFold交叉验证集
 
-\# 判断分类正误率
+# 判断分类正误率
 
 sums = 0
 
@@ -63,7 +63,7 @@ for i in range(len(predicted)):
 
 print('准确率：',sums * 100.0 / len(predicted),"%")
 
-\# 制图
+# 制图
 
 fig, ax = plt.subplots() 
 
@@ -164,7 +164,7 @@ def kmeans(data, k):
 
 ​    centroids = randCent(data,k)
 
-​    \#print (centroids)
+​    #print (centroids)
 
 ​    m = np.shape(data)[0]
 
@@ -174,7 +174,7 @@ def kmeans(data, k):
 
 ​    
 
-​    \#当所有点的所属点的类别状态不再变化之后，停止更新
+​    #当所有点的所属点的类别状态不再变化之后，停止更新
 
 ​    while clusterChanged:
 
@@ -188,7 +188,7 @@ def kmeans(data, k):
 
 ​            
 
-​            \#计算当前样本点与centroid的距离
+​            #计算当前样本点与centroid的距离
 
 ​            for j in range(k):
 
@@ -212,17 +212,17 @@ def kmeans(data, k):
 
 ​        print (centroids)
 
-​        \#print (clusterAssignment)
+​        #print (clusterAssignment)
 
 ​        
 
-​        \# 重新计算中心点
+​        # 重新计算中心点
 
 ​        for cent in range(k):   
 
 ​            ptsInClust = data[np.nonzero(clusterAssignment[:,0] == cent)[0]]   # 去第一列等于cent的所有列
 
-​            \#print (np.nonzero(clusterAssignment[:,0] == cent)[0])
+​            #print (np.nonzero(clusterAssignment[:,0] == cent)[0])
 
 ​            centroids[cent,:] = np.mean(ptsInClust, axis = 0)  # 算出这些数据的中心点
 

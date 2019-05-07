@@ -1,4 +1,4 @@
-# 数据的全生命周期
+# 实验八 数据的全生命周期
 
 ## 实验目的
 
@@ -238,8 +238,6 @@ train_df.head()  #将非数值型特征转换为数值型特征
 
 
 
-
-
 ![pic](pic/8.12.png)
 
 将Mr变换为1，Miss变换为2，Mrs变换为3，Rare变换为4。并将所有是缺失值的用0填充。
@@ -251,9 +249,8 @@ test_df = test_df.drop(['Name'], axis=1)
 
 combine = [train_df, test_df]
 
- \#删除掉已经融合过得特征
+ #删除掉已经融合过得特征
 
-
 
 '''自然数编码'''
 
@@ -328,7 +325,7 @@ train_df[['Survived', 'FamilySize']].groupby(['FamilySize'], as_index=False).mea
 ```python
 '''数值处理：缩放'''
 
-\#融合新的特征 是否独自乘船
+#融合新的特征 是否独自乘船
 
 for dataset in combine:
 
@@ -396,7 +393,7 @@ train_df[['Embarked', 'Survived']].groupby(['Embarked'], as_index=False).mean().
 ```python
 '''类别特征：自然编码'''
 
-\#把分类要素转换为数字
+#把分类要素转换为数字
 
 for dataset in combine:
 
