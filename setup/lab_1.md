@@ -14,8 +14,6 @@
 
 ## 实验步骤和结果
 
-![pic1](https://github.com/tianyichow/DaSE_lab/raw/master/setup/pic/2.5的副本.png)
-
 ![pic1](https://github.com/tianyichow/DaSE_lab/raw/master/setup/pic/pic1.png)
 ![pic2](https://github.com/tianyichow/DaSE_lab/raw/master/setup/pic/pic2.png)
 
