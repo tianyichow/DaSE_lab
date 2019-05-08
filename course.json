@@ -10,6 +10,10 @@
 			"environment": "git",
 			"steps":[
 				{
+					"title":	"课程介绍",
+					"text" :	"setup/course0.md"
+				},
+				{
 					"title":	" ",
 					"text" :	"setup/lab_1.md"
 				}
