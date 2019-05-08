@@ -78,15 +78,15 @@ plt.show()
 
 【结果】
 
-![](pic/10.1.png)
+![](https://github.com/tianyichow/DaSE_lab/raw/master/setup/pic/10.1.png)
 
 **实验二： K-means聚类算法**
 
 K-means算法流程
 
-![pic](pic/10.2.png)
+![pic](https://github.com/tianyichow/DaSE_lab/raw/master/setup/pic/10.2.png)
 
-![](pic/10.3.png)
+![](https://github.com/tianyichow/DaSE_lab/raw/master/setup/pic/10.3.png)
 
 【代码】
 
@@ -247,6 +247,6 @@ if __name__=="__main__":
 
 【结果】
 
-![](pic/10.4.png)
+![](https://github.com/tianyichow/DaSE_lab/raw/master/setup/pic/10.4.png)
 
  

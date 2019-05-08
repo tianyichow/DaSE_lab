@@ -8,7 +8,7 @@
 
 本次实验要求动手实现一个两层的神经网络，并用该神经网络模型完成分类任务。神经网络模型的结构如下：
 
-![pic](pic/10.5.png)
+![pic](https://github.com/tianyichow/DaSE_lab/raw/master/setup/pic/10.5.png)
 
  
 
@@ -24,7 +24,7 @@
 
 前向传播的过程比较简单，我们只是通过特点的计算规则，根据前一层神经元和权值计算出结果，经过非线性映射后，传递到下一层，计算过程如下：
 
-![pic](pic/10.6.png)
+![pic](https://github.com/tianyichow/DaSE_lab/raw/master/setup/pic/10.6.png)
 
  
 
@@ -34,13 +34,13 @@
 
 在最后一层，我们需要定义一个损失函数，如下图。我们通过该损失函数可以计算经过当前前向传播过程，我们的最终的损失是多少，并依此来指导我们更新整个神经网络的参数：
 
- ![pic](pic/10.7.png)
+ ![pic](https://github.com/tianyichow/DaSE_lab/raw/master/setup/pic/10.7.png)
 
  
 
 最后是反向传播过程，其实这个过程就是更新整个神经网络中每层参数的过程，反向传播过程是通过梯度下降算法来完成的。根据损失函数和链式求导规则，我们可以从后往前逐层计算每一层神经网络参数的梯度，从而完成一次神经网络参数的更新过程，这里我们直接给出本文中这个简单神经网络的每层的梯度更新式，具体推到过程没有给出，感兴趣可以自己试一下。
 
-![pic](pic/10.8.png)
+![pic](https://github.com/tianyichow/DaSE_lab/raw/master/setup/pic/10.8.png)
 
  ```python
 import numpy as np
@@ -65,7 +65,7 @@ X, Y = load_planar_dataset()
 
 我们使用sklearn数据集中的一个简单例子，数据图像如下 
 
-![pic](pic/10.9.png)
+![pic](https://github.com/tianyichow/DaSE_lab/raw/master/setup/pic/10.9.png)
 
  
 
@@ -225,7 +225,7 @@ def forward_propagation(X, parameters):
 
 损失函数如下：
 
-![pic](pic/10.7.png)
+![pic](https://github.com/tianyichow/DaSE_lab/raw/master/setup/pic/10.7.png)
 
  
 
@@ -281,7 +281,7 @@ def compute_cost(A2, Y, parameters):
 
 更新参数的公式如下：
 
- ![pic](pic/10.8.png)
+ ![pic](https://github.com/tianyichow/DaSE_lab/raw/master/setup/pic/10.8.png)
 
   
 
@@ -593,7 +593,7 @@ print ('Accuracy: %d' % float((np.dot(Y,predictions.T) + np.dot(1-Y,1-prediction
 
 结果如图：
 
-![pic](pic/10.10.png)
+![pic](https://github.com/tianyichow/DaSE_lab/raw/master/setup/pic/10.10.png)
 
 
 

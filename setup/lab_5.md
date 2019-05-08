@@ -25,7 +25,7 @@
 #### [爬虫思路分析]
 
 1.爬取的内容为豆瓣电影TOP250的信息,如图所示
-​​![](pic/5.1.png)
+​![](https://github.com/tianyichow/DaSE_lab/raw/master/setup/pic/5.1.png)
 ​
 2.爬取豆瓣电影TOP250信息,通过手动浏览,以下为前4页的网址:
 https://movie.douban.com/top250?start=0&filter=
@@ -35,7 +35,7 @@ https://movie.douban.com/top250?start=75&filter=
 发现,只需要改动start后面的数字就可以构造出10页的网址.
 
 3.需要爬取的信息有:电影名称,导演及主演,电影信息,星级,评价数量,如图所示:
-​​​​![](pic/5.2.png)
+​​​![](https://github.com/tianyichow/DaSE_lab/raw/master/setup/pic/5.2.png)
 
 4.运用Python中的csv库,把爬取的信息保存在本地
 
@@ -44,6 +44,7 @@ https://movie.douban.com/top250?start=75&filter=
 1.确保安装爬虫需要的库,包括lxml,requests
 如果没有安装,只需要执行如下命令即可安装:
 	
+
 	pip install lxml
 	pip install requests
 lxml库是基于libxml2的XML解析库的Python封装,用C语言编写,该库使用Xpath语法解析定位网页数据
@@ -51,7 +52,7 @@ request库用于向网页服务器发送请求,从而获得网页的数据
 
 [实验代码]
 
-```
+```python
 from lxml import etree
 import requests
 import csv

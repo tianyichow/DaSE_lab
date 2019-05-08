@@ -38,7 +38,8 @@ Square_root_1()
 ```
 
 执行结果
-​​![pic1](pic/2.1.png)
+​![pic1](https://github.com/tianyichow/DaSE_lab/raw/master/setup/pic/2.1.png)
+
 #### 2.二分查找法
 
 #### 开平方2  二分法
@@ -62,13 +63,13 @@ def Square_root_2():
 Square_root_2()
 ```
 
-
 执行结果
-​​![pic2](pic/2.2.png)
+![pic2](https://github.com/tianyichow/DaSE_lab/raw/master/setup/pic/2.2.png)
 3.牛顿法
 参考文献：
-![]{https://zh.wikipedia.org/wiki/%E7%89%9B%E9%A1%BF%E6%B3%95
-​​![pic2](pic/2.3.png)
+https://zh.wikipedia.org/wiki/%E7%89%9B%E9%A1%BF%E6%B3%95
+​​![pic2](https://github.com/tianyichow/DaSE_lab/raw/master/setup/pic/2.3.png)
+
 #### 牛顿法
 
 ```
@@ -85,14 +86,14 @@ Square_root_3()
 ```
 
 执行结果
-​​![pic2](pic/2.4.png)
+​![pic2](https://github.com/tianyichow/DaSE_lab/raw/master/setup/pic/2.4.png)
 
 #### 实验二 使用蒙特卡洛法求Pi的值
 
 参考文献：https://zh.wikipedia.org/wiki/%E8%92%99%E5%9C%B0%E5%8D%A1%E7%BE%85%E6%96%B9%E6%B3%95 
 
 在一个边长为1的正方形内一均匀概率随机投点，该点落在此正方形的内切1/4圆中的概率即为内切圆与正方形的面积比值，所以Pi=落入圆的点数/所有点数*4。
-​​![pic2](pic/2.5.png)
+​![pic2](https://github.com/tianyichow/DaSE_lab/raw/master/setup/pic/2.5.png)
 参考代码
 ​
 

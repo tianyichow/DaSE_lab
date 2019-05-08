@@ -22,9 +22,9 @@ https://blog.csdn.net/han_xiaoyang/article/details/49123419
 
 1、设计合适的损失函数，在这里我们基于最大似然函数来设计我们的损失函数。简单解释一下（假设你已经大致看过上面的博客并对逻辑回归有了简单的认识），我们将我们的计算结果通过sigmod转化到[0,1]的区间，可以理解为所属类别的概率。那么对于我们的m个样本点，我们希望我们的模型能够使得所有样本点的预测结果属于真实类别的概率最大，所以通过最大似然估计得到公式如下。
 
-![pic](pic/9.1.png)
+![pic](https://github.com/tianyichow/DaSE_lab/raw/master/setup/pic/9.1.png)
 
-![pic](pic/9.2.png)
+![pic](https://github.com/tianyichow/DaSE_lab/raw/master/setup/pic/9.2.png)
 
 
 
@@ -254,7 +254,7 @@ storeResult()
 
 __实验结果__
 
-![pic](pic/9.3.png)
+![pic](https://github.com/tianyichow/DaSE_lab/raw/master/setup/pic/9.3.png)
 
 ## 课后作业
 

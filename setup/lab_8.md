@@ -50,7 +50,7 @@
 
 对泰坦尼克号项目数据进行数据预处理，清洗，特征工程之后，得到从原始数据（图1）到可以直接导入到算法模型的数据（图2），从而用机器学习算法进行数据建模，预测遇难人员的生死。本节内容主要放在数据前期处理部分。
 
-![pic](pic/8.1.png)
+![pic](https://github.com/tianyichow/DaSE_lab/raw/master/setup/pic/8.1.png)
 
 图-1: 算法模型数据
 
@@ -82,7 +82,7 @@ Embarked:乘客登船口岸
 
 
 
-![pic](pic/8.2.png)
+![pic](https://github.com/tianyichow/DaSE_lab/raw/master/setup/pic/8.2.png)
 
 图-2:
 
@@ -112,17 +112,17 @@ combine = [train_df, test_df]
 
 train_df.head(5)  #预览数据集前5行
 
-![pic](pic/8.3.png)
+![pic](https://github.com/tianyichow/DaSE_lab/raw/master/setup/pic/8.3.png)
 
 train_df.tail()  #预览数据集最后5行
 
-![pic](pic/8.4.png)
+![pic](https://github.com/tianyichow/DaSE_lab/raw/master/setup/pic/8.4.png)
 
 '''随机抽取样本'''
 
 train_df.sample(5)   #随机预览指定参数的样本数据
 
-![pic](pic/8.5.png)
+![pic](https://github.com/tianyichow/DaSE_lab/raw/master/setup/pic/8.5.png)
 
 随机从数据集中抽取样本，数量可以自由指定
 
@@ -130,7 +130,7 @@ train_df.sample(5)   #随机预览指定参数的样本数据
 
 train_df.info()   #输出字段总共条数以及类型,dtype,memory空间
 
-![pic](pic/8.6.png)
+![pic](https://github.com/tianyichow/DaSE_lab/raw/master/setup/pic/8.6.png)
 
 文件的总体描述信息，包括列名，行数，是否为空，类型和大小等信息。
 
@@ -138,7 +138,7 @@ train_df.info()   #输出字段总共条数以及类型,dtype,memory空间
 
 train_df.describe()  #数据的描述（总数，平均值，std,最大\小值25%，50%，75%）对于数据的快速统计汇总
 
-![pic](pic/8.7.png)
+![pic](https://github.com/tianyichow/DaSE_lab/raw/master/setup/pic/8.7.png)
 
 然后分析特征值和结果之间的关系
 
@@ -150,7 +150,7 @@ train_df[['Pclass','Survived']].groupby(['Pclass'],as_index=False).mean().sort_v
 
 \#按照某一类别计算生存的平均值,来观察该字段对结果的影响性大小
 
-![pic](pic/8.8.png)
+![pic](https://github.com/tianyichow/DaSE_lab/raw/master/setup/pic/8.8.png)
 
 '''可视化数据'''
 
@@ -170,7 +170,7 @@ g = sns.FacetGrid(train_df, col='Pclass')
 g.map(plt.hist, 'Age', bins = 20)  #建立数据集中两个子集之间的对应关系
 ```
 
-![pic](pic/8.9.png)
+![pic](https://github.com/tianyichow/DaSE_lab/raw/master/setup/pic/8.9.png)
 
 ```python
 grid = sns.FacetGrid(train_df, row='Embarked', size=2.2, aspect=1.6)
@@ -182,7 +182,7 @@ grid.add_legend()
 
 #### 探索Embarked和survived之间的影响关系
 
-![pic](pic/8.10.png)
+![pic](https://github.com/tianyichow/DaSE_lab/raw/master/setup/pic/8.10.png)
 
 
 
@@ -198,7 +198,7 @@ pd.crosstab(train_df['Title'], train_df['Sex'])  #找出每个name缩写的人�
 
 
 
-![pic](pic/8.11.png)
+![pic](https://github.com/tianyichow/DaSE_lab/raw/master/setup/pic/8.11.png)
 
 ```python
 '''文本特征，类似于特征的融合'''
@@ -238,7 +238,7 @@ train_df.head()  #将非数值型特征转换为数值型特征
 
 
 
-![pic](pic/8.12.png)
+![pic](https://github.com/tianyichow/DaSE_lab/raw/master/setup/pic/8.12.png)
 
 将Mr变换为1，Miss变换为2，Mrs变换为3，Rare变换为4。并将所有是缺失值的用0填充。
 
@@ -263,7 +263,7 @@ train_df.head()  #利用map函数直接将非数值型数值转换为数值型�
 
 
 
-![pic](pic/8.13.png)
+![pic](https://github.com/tianyichow/DaSE_lab/raw/master/setup/pic/8.13.png)
 
 将所有数据的性别信息用自然数1，2进行编码
 
@@ -299,7 +299,7 @@ for dataset in combine:
 train_df.head()
 ```
 
-![pic](pic/8.14.png)
+![pic](https://github.com/tianyichow/DaSE_lab/raw/master/setup/pic/8.14.png)
 
 ```python
 
@@ -320,7 +320,7 @@ train_df[['Survived', 'FamilySize']].groupby(['FamilySize'], as_index=False).mea
 
 
 
-![pic](pic/8.15.png)
+![pic](https://github.com/tianyichow/DaSE_lab/raw/master/setup/pic/8.15.png)
 
 ```python
 '''数值处理：缩放'''
@@ -338,7 +338,7 @@ train_df[['IsAlone', 'Survived']].groupby(['IsAlone'], as_index = False).mean()
 
 
 
-![pic](pic/8.16.png)
+![pic](https://github.com/tianyichow/DaSE_lab/raw/master/setup/pic/8.16.png)
 
 ```python
 # 将SibSp,Parch和FamilySize融合成一列IsAlone
@@ -354,7 +354,7 @@ train_df.head(6)
 
 
 
-![pic](pic/8.17.png)
+![pic](https://github.com/tianyichow/DaSE_lab/raw/master/setup/pic/8.17.png)
 
 ```python
 '''数值处理：特征交叉'''
@@ -372,7 +372,7 @@ train_df.loc[:,['Age*Pclass', 'Age', 'Pclass']].head(10)
 
 
 
-![pic](pic/8.18.png)
+![pic](https://github.com/tianyichow/DaSE_lab/raw/master/setup/pic/8.18.png)
 
 ```python
 
@@ -388,7 +388,7 @@ for dataset in combine:
 train_df[['Embarked', 'Survived']].groupby(['Embarked'], as_index=False).mean().sort_values(by='Survived', ascending=False)
 ```
 
-![pic](pic/8.19.png)
+![pic](https://github.com/tianyichow/DaSE_lab/raw/master/setup/pic/8.19.png)
 
 ```python
 '''类别特征：自然编码'''
@@ -404,7 +404,7 @@ train_df.head()
 
 
 
-![pic](pic/8.20.png)
+![pic](https://github.com/tianyichow/DaSE_lab/raw/master/setup/pic/8.20.png)
 
 ```python
 test_df['Fare'].fillna(test_df['Fare'].dropna().median(), inplace=True)
@@ -416,7 +416,7 @@ train_df['FareBand'] = pd.qcut(train_df['Fare'], 4)
 train_df[['FareBand', 'Survived']].groupby(['FareBand'], as_index=False).mean().sort_values(by='FareBand', ascending=True)
 ```
 
-![pic](pic/8.21.png)
+![pic](https://github.com/tianyichow/DaSE_lab/raw/master/setup/pic/8.21.png)
 
 ```python
 # 将Fare按区间分成四段之后映射成4个数字
@@ -446,14 +446,14 @@ train_df.head(10)
 
 
 
-![pic](pic/8.22.png)
+![pic](https://github.com/tianyichow/DaSE_lab/raw/master/setup/pic/8.22.png)
 
 ```python
 test_df = test_df.drop('Survived', axis=1)
 train_df.head()
 ```
 
-![pic](pic/8.23.png)
+![pic](https://github.com/tianyichow/DaSE_lab/raw/master/setup/pic/8.23.png)
 
 至此，恭喜你已经学会了对于数据初步的特征工程处理，可以将数据直接导入到机器学习的相关模型中进行训练，怎么样用模型训练数据会在下一节课介绍。
 

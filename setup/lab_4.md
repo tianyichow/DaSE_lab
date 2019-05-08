@@ -199,9 +199,10 @@ http://www.ruanyifeng.com/blog/2017/09/flame-graph.html
 
 这样的命令，其中-c代表配置。配置里面的c，表示cpu火焰图，m表示内存图，h表示代码热图。当主程序退出后，vprof会自动收集这些数据，并且启动一个http服务器，自动打开浏览器将指定的图表打开展示出来。
 保存实验二的代码为test.py，使用vprof运行代码效果如下：
-​​![](pic/4.1.png)
-​​![](pic/4.2.png)
+![](https://github.com/tianyichow/DaSE_lab/raw/master/setup/pic/4.1.png)
+​​![](https://github.com/tianyichow/DaSE_lab/raw/master/setup/pic/4.2.png)
 ​​
+
 #### 作业
 
 1、比较常用排序算法（冒泡排序、选择排序、插入排序，归并排序）的时间性能。
@@ -210,7 +211,7 @@ http://www.ruanyifeng.com/blog/2017/09/flame-graph.html
 
 （2）归并排序代码直接给出，其他三种排序自行完成。
 
-```
+```python
 def merge_sort(nums):
     lens = len(nums)
     count = lens
