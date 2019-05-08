@@ -20,7 +20,7 @@
 ## 实验一：统计字符串中单词出现次数
 
 大数据版的“Hello World”程序就是字符统计啦。我们任务很简单，给定一个字符串列表，我们需要统计字符串列表中每种字符串出现次数。
-![pic3](https://github.com/tianyichow/DaSE_lab/raw/master/setup/pic/pic3.png =200x)
+![pic3](https://github.com/tianyichow/DaSE_lab/raw/master/setup/pic/pic3.png)
 
 ### [参考代码]
 
