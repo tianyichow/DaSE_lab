@@ -4,6 +4,95 @@
 	"author":	"teacher",
 	"description":	"ECNU DaSE 数据科学与工程导论课程实验",
 	"scenarios":	[
+		
+		{
+			"title":	"第01单元：课程介绍",
+			"pre":	"pre.sh",
+			"environment": "git",
+			"steps":[
+				{
+					"title":	"本单元概况",
+					"text" :	"setup/unit0/course0.1.md"
+				},
+				{
+					"title":	"课程背景",
+					"text" :	"setup/unit0/course0.2.md"
+				},
+				{
+					"title":	"课程简介",
+					"text" :	"setup/unit0/course0.3.md"
+				},
+				{
+					"title":	"课程模式",
+					"text" :	"setup/unit0/course0.4.md"
+				},
+				{
+					"title":	"知识体系",
+					"text" :	"setup/unit0/course0.5.md"
+				}
+				
+			]
+
+		},
+
+		{
+			"title":	"第02单元：绪论",
+			"pre":	"pre.sh",
+			"environment": "git",
+			"steps":[
+				{
+					"title":	"本单元概况",
+					"text" :	"setup/unit1/course1.1.md"
+				},
+				{
+					"title":	"信息文明与数据简史",
+					"text" :	"setup/unit1/course1.2.md"
+				},
+				{
+					"title":	"数据科学与工程的基本内涵",
+					"text" :	"setup/unit1/course1.3.md"
+				},
+				{
+					"title":	"第四范式：数据密集型科学",
+					"text" :	"setup/unit1/course1.4.md"
+				},
+				{
+					"title":	"比特与算法重构我们的世界",
+					"text" :	"setup/unit1/course1.5.md"
+				},
+				{
+					"title":	"实训基础：Git、Python与KFCoding",
+					"text" :	"setup/unit1/course1.6.md"
+				}
+				
+			]
+
+		},
+
+		{
+			"title":	"第03单元：实验课1（Git与Python基础）",
+			"pre":	"pre.sh",
+			"environment": "git",
+			"steps":[
+				{
+					"title":	"实验介绍",
+					"text" :	"setup/lab_1/lab_1.1.md"
+				},
+				{
+					"title":	"实验一：统计字符串中单词出现次数",
+					"text" :	"setup/lab_1/lab_1.2.md"
+				},
+				{
+					"title":	"实验二：Git实训",
+					"text" :	"setup/lab_1/lab_1.3.md"
+				}
+				
+			]
+
+		},
+
+
+
 		{
 			"title":	"实验一：Git与Python基础",
 			"pre":	"pre.sh",
