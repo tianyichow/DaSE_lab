@@ -27,6 +27,10 @@
 			
 			"steps":[
 				{
+					"title":	" 2 ",
+					"text" :	"setup/course1.md"
+				},
+				{
 					"title":	" ",
 					"text" :	"setup/lab_2.md"
 				}
@@ -39,6 +43,10 @@
 			"title":	"实验三：数据处理与基本操作",
 			
 			"steps":[
+				{
+					"title":	" 3 ",
+					"text" :	"setup/course2.md"
+				},
 				{
 					"title":	" ",
 					"text" :	"setup/lab_3.md"
