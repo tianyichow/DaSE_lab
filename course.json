@@ -8,7 +8,7 @@
 		{
 			"title":	"第01单元：课程介绍",
 			"pre":	"pre.sh",
-			"environment": "git",
+			"environment": "registry.cn-shanghai.aliyuncs.com/kfcoding/kfcoding-eci-envs:python",
 			"steps":[
 				{
 					"title":	"本单元概况",
@@ -38,7 +38,7 @@
 		{
 			"title":	"第02单元：绪论",
 			"pre":	"pre.sh",
-			"environment": "git",
+			"environment": "registry.cn-shanghai.aliyuncs.com/kfcoding/kfcoding-eci-envs:python",
 			"steps":[
 				{
 					"title":	"本单元概况",
@@ -72,7 +72,7 @@
 		{
 			"title":	"第03单元：实验课1（Git与Python基础）",
 			"pre":	"pre.sh",
-			"environment": "git",
+			"environment": "registry.cn-shanghai.aliyuncs.com/kfcoding/kfcoding-eci-envs:python",
 			"steps":[
 				{
 					"title":	"实验介绍",
@@ -96,7 +96,7 @@
 		{
 			"title":	"实验一：Git与Python基础",
 			"pre":	"pre.sh",
-			"environment": "git",
+			"environment": "registry.cn-shanghai.aliyuncs.com/kfcoding/kfcoding-eci-envs:python",
 			"steps":[
 				{
 					"title":	"课程介绍",
@@ -113,7 +113,7 @@
 
 		{
 			"title":	"实验二：数据思维与问题求解",
-			
+			"environment": "registry.cn-shanghai.aliyuncs.com/kfcoding/kfcoding-eci-envs:python",
 			"steps":[
 				{
 					"title":	" 2 ",
@@ -130,7 +130,7 @@
 
 		{
 			"title":	"实验三：数据处理与基本操作",
-			
+			"environment": "registry.cn-shanghai.aliyuncs.com/kfcoding/kfcoding-eci-envs:python",
 			"steps":[
 				{
 					"title":	" 3 ",
@@ -146,7 +146,7 @@
 		},
 		{
 			"title":	"实验四：程序性能分析",
-			
+			"environment": "registry.cn-shanghai.aliyuncs.com/kfcoding/kfcoding-eci-envs:python",
 			"steps":[
 				{
 					"title":	" ",
@@ -159,7 +159,7 @@
 
 		{
 			"title":	"实验五：数据采集与存储",
-			
+			"environment": "registry.cn-shanghai.aliyuncs.com/kfcoding/kfcoding-eci-envs:python",
 			"steps":[
 				{
 					"title":	" ",
@@ -172,7 +172,7 @@
 
 		{
 			"title":	"实验六：数据库基础",
-			
+			"environment": "registry.cn-shanghai.aliyuncs.com/kfcoding/kfcoding-eci-envs:python",
 			"steps":[
 				{
 					"title":	" ",
@@ -185,7 +185,7 @@
 
 		{
 			"title":	"实验七：Git与Python基础",
-			
+			"environment": "registry.cn-shanghai.aliyuncs.com/kfcoding/kfcoding-eci-envs:python",
 			"steps":[
 				{
 					"title":	" ",
@@ -197,7 +197,7 @@
 		},
 		{
 			"title":	"实验八：数据的全生命周期",
-			
+			"environment": "registry.cn-shanghai.aliyuncs.com/kfcoding/kfcoding-eci-envs:python",
 			"steps":[
 				{
 					"title":	" ",
@@ -209,7 +209,7 @@
 		},
 		{
 			"title":	"实验九：数据建模与分析",
-			
+			"environment": "registry.cn-shanghai.aliyuncs.com/kfcoding/kfcoding-eci-envs:python",
 			"steps":[
 				{
 					"title":	" ",
@@ -222,7 +222,7 @@
 
 		{
 			"title":	"实验十(1)：分类与聚类",
-			
+			"environment": "registry.cn-shanghai.aliyuncs.com/kfcoding/kfcoding-eci-envs:python",
 			"steps":[
 				{
 					"title":	" ",
@@ -234,7 +234,7 @@
 		},
 		{
 			"title":	"实验十(2)：神经网络基础",
-			
+			"environment": "registry.cn-shanghai.aliyuncs.com/kfcoding/kfcoding-eci-envs:python",
 			"steps":[
 				{
 					"title":	" ",
