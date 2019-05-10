@@ -1,73 +1,4 @@
-{
-	"version":	1,
-	"title":"数据科学与工程导论实验",
-	"author":	"teacher",
-	"description":	"ECNU DaSE 数据科学与工程导论课程实验",
-	"scenarios":	[
-		
-		{
-			"title":	"第01单元：课程介绍",
-			"pre":	"pre.sh",
-			"environment": "git",
-			"steps":[
-				{
-					"title":	"本单元概况",
-					"text" :	"setup/unit0/course0.1.md"
-				},
-				{
-					"title":	"课程背景",
-					"text" :	"setup/unit0/course0.2.md"
-				},
-				{
-					"title":	"课程简介",
-					"text" :	"setup/unit0/course0.3.md"
-				},
-				{
-					"title":	"课程模式",
-					"text" :	"setup/unit0/course0.4.md"
-				},
-				{
-					"title":	"知识体系",
-					"text" :	"setup/unit0/course0.5.md"
-				}
-				
-			]
 
-		},
-
-		{
-			"title":	"第02单元：绪论",
-			"pre":	"pre.sh",
-			"environment": "git",
-			"steps":[
-				{
-					"title":	"本单元概况",
-					"text" :	"setup/unit1/course1.1.md"
-				},
-				{
-					"title":	"信息文明与数据简史",
-					"text" :	"setup/unit1/course1.2.md"
-				},
-				{
-					"title":	"数据科学与工程的基本内涵",
-					"text" :	"setup/unit1/course1.3.md"
-				},
-				{
-					"title":	"第四范式：数据密集型科学",
-					"text" :	"setup/unit1/course1.4.md"
-				},
-				{
-					"title":	"比特与算法重构我们的世界",
-					"text" :	"setup/unit1/course1.5.md"
-				},
-				{
-					"title":	"实训基础：Git、Python与KFCoding",
-					"text" :	"setup/unit1/course1.6.md"
-				}
-				
-			]
-
-		},
 
 		{
 			"title":	"第03单元：实验课1（Git与Python基础）",
@@ -90,160 +21,605 @@
 			]
 
 		},
-
-
-
 		{
-			"title":	"实验一：Git与Python基础",
+			"title":	"第04单元：数据思维与问题求解",
 			"pre":	"pre.sh",
 			"environment": "git",
 			"steps":[
 				{
-					"title":	"课程介绍",
-					"text" :	"setup/course0.md"
+					"title":	"本单元概况",
+					"text" :	"setup/unit2/course2.1.md"
 				},
 				{
-					"title":	" ",
-					"text" :	"setup/lab_1.md"
-				}
-				
-			]
-
-		},
-
-		{
-			"title":	"实验二：数据思维与问题求解",
-			
-			"steps":[
-				{
-					"title":	" 2 ",
-					"text" :	"setup/course1.md"
+					"title":	"数据思维与数据科学过程",
+					"text" :	"setup/unit2/course2.2.md"
 				},
 				{
-					"title":	" ",
-					"text" :	"setup/lab_2.md"
-				}
-				
-			]
-
-		},
-
-		{
-			"title":	"实验三：数据处理与基本操作",
-			
-			"steps":[
-				{
-					"title":	" 3 ",
-					"text" :	"setup/course2.md"
+					"title":	"计算思维与统计思维",
+					"text" :	"setup/unit2/course2.3.md"
 				},
 				{
-					"title":	" ",
-					"text" :	"setup/lab_3.md"
+					"title":	"像数据科学家一样思考",
+					"text" :	"setup/unit2/course2.4.md"
+				},
+				{
+					"title":	"数据驱动的问题求解实例",
+					"text" :	"setup/unit2/course2.5.md"
 				}
 				
 			]
 
 		},
-		{
-			"title":	"实验四：程序性能分析",
-			
+			{
+			"title":	"第05单元：实验课2（Python问题求解）",
+			"pre":	"pre.sh",
+			"environment": "git",
 			"steps":[
 				{
-					"title":	" ",
-					"text" :	"setup/lab_4.md"
-				}
-				
-			]
-
-		},
-
-		{
-			"title":	"实验五：数据采集与存储",
-			
-			"steps":[
+					"title":	"实验介绍",
+					"text" :	"setup/lab_2/lab_2.1.md"
+				},
 				{
-					"title":	" ",
-					"text" :	"setup/lab_5.md"
-				}
-				
-			]
-
-		},
-
-		{
-			"title":	"实验六：数据库基础",
-			
-			"steps":[
+					"title":	"实验一：求解根号2的三种不同方法",
+					"text" :	"setup/lab_2/lab_2.2.md"
+				},
 				{
-					"title":	" ",
-					"text" :	"setup/lab_6.md"
-				}
-				
-			]
-
-		},
-
-		{
-			"title":	"实验七：Git与Python基础",
-			
-			"steps":[
+					"title":	"实验二：使用蒙特卡洛法求Pi的值",
+					"text" :	"setup/lab_2/lab_2.3.md"
+				},
 				{
-					"title":	" ",
-					"text" :	"setup/lab_7.md"
-				}
-				
+					"title":	"单元习题",
+					"text" :	"setup/lab_2/lab_2.4.md"
+				}				
 			]
 
 		},
 		{
-			"title":	"实验八：数据的全生命周期",
-			
+			"title":	"第06单元：数据与计算Ⅰ",
+			"pre":	"pre.sh",
+			"environment": "git",
 			"steps":[
 				{
-					"title":	" ",
-					"text" :	"setup/lab_8.md"
-				}
-				
-			]
-
-		},
-		{
-			"title":	"实验九：数据建模与分析",
-			
-			"steps":[
+					"title":	"本单元概况",
+					"text" :	"setup/unit3/course3.1.md"
+				},
 				{
-					"title":	" ",
-					"text" :	"setup/lab_9.md"
+					"title":	"比特与数据",
+					"text" :	"setup/unit3/course3.2.md"
+				},
+				{
+					"title":	"数据的二进制表示",
+					"text" :	"setup/unit3/course3.3.md"
+				},
+				{
+					"title":	"数据的模型",
+					"text" :	"setup/unit3/course3.4.md"
+				},
+				{
+					"title":	"数据的结构",
+					"text" :	"setup/unit3/course3.5.md"
 				}
 				
 			]
 
 		},
 
-		{
-			"title":	"实验十(1)：分类与聚类",
-			
+			{
+			"title":	"第07单元：实验课3（数据的Python程序表达）",
+			"pre":	"pre.sh",
+			"environment": "git",
 			"steps":[
 				{
-					"title":	" ",
-					"text" :	"setup/lab_10.1.md"
+					"title":	"实验介绍",
+					"text" :	"setup/lab_3/lab_3.1.md"
+				}			
+			]
+
+		},
+		{
+			"title":	"第08单元：数据与计算Ⅱ",
+			"pre":	"pre.sh",
+			"environment": "git",
+			"steps":[
+				{
+					"title":	"本单元概况",
+					"text" :	"setup/unit4/course4.1.md"
+				},
+				{
+					"title":	"数据的计算：算法",
+					"text" :	"setup/unit4/course4.2.md"
+				},
+				{
+					"title":	"算法分析与局限性",
+					"text" :	"setup/unit4/course4.3.md"
+				},
+				{
+					"title":	"数据结构与算法的关系",
+					"text" :	"setup/unit4/course4.4.md"
+				},
+				{
+					"title":	"计算机编程语言",
+					"text" :	"setup/unit4/course4.5.md"
+				}
+				
+			]
+
+		},
+
+			{
+			"title":	"第09单元：实验课4（Python算法）",
+			"pre":	"pre.sh",
+			"environment": "git",
+			"steps":[
+				{
+					"title":	"实验介绍",
+					"text" :	"setup/lab_4/lab_4.1.md"
+				}			
+			]
+
+		},
+		{
+			"title":	"第10单元：计算基础设施",
+			"pre":	"pre.sh",
+			"environment": "git",
+			"steps":[
+				{
+					"title":	"本单元概况",
+					"text" :	"setup/unit5/course5.1.md"
+				},
+				{
+					"title":	"通用机器的思想",
+					"text" :	"setup/unit5/course5.2.md"
+				},
+				{
+					"title":	"程序是如何执行的",
+					"text" :	"setup/unit5/course5.3.md"
+				},
+				{
+					"title":	"计算机系统结构",
+					"text" :	"setup/unit5/course5.4.md"
+				},
+				{
+					"title":	"云计算与数据中心",
+					"text" :	"setup/unit5/course5.5.md"
+				}
+				
+			]
+
+		},
+
+			{
+			"title":	"第11单元：实验课5（Python程序性能评测）",
+			"pre":	"pre.sh",
+			"environment": "git",
+			"steps":[
+				{
+					"title":	"实验介绍",
+					"text" :	"setup/lab_5/lab_5.1.md"
+				}			
+			]
+
+		},
+		{
+			"title":	"第12单元：数据的全生命周期管理",
+			"pre":	"pre.sh",
+			"environment": "git",
+			"steps":[
+				{
+					"title":	"本单元概况",
+					"text" :	"setup/unit6/course6.1.md"
+				},
+				{
+					"title":	"数据采集",
+					"text" :	"setup/unit6/course6.2.md"
+				},
+				{
+					"title":	"数据存储",
+					"text" :	"setup/unit6/course6.3.md"
+				},
+				{
+					"title":	"数据管理",
+					"text" :	"setup/unit6/course6.4.md"
+				},
+				{
+					"title":	"数据计算",
+					"text" :	"setup/unit6/course6.5.md"
+				},
+				{
+					"title":	"数据分析",
+					"text" :	"setup/unit6/course6.6.md"
+				},
+				{
+					"title":	"数据展示",
+					"text" :	"setup/unit6/course6.7.md"
 				}
 				
 			]
 
 		},
 		{
-			"title":	"实验十(2)：神经网络基础",
-			
+			"title":	"第13单元：实验课6（Python网络爬虫）",
+			"pre":	"pre.sh",
+			"environment": "git",
 			"steps":[
 				{
-					"title":	" ",
-					"text" :	"setup/lab_10.2.md"
+					"title":	"实验介绍",
+					"text" :	"setup/lab_6/lab_6.1.md"
+				}			
+			]
+
+		},
+		{
+			"title":	"第14单元：数据库系统",
+			"pre":	"pre.sh",
+			"environment": "git",
+			"steps":[
+				{
+					"title":	"本单元概况",
+					"text" :	"setup/unit7/course7.1.md"
+				},
+				{
+					"title":	"数据库的起源与发展",
+					"text" :	"setup/unit7/course7.2.md"
+				},
+				{
+					"title":	"关系数据库",
+					"text" :	"setup/unit7/course7.3.md"
+				},
+				{
+					"title":	"数据仓库与OLAP",
+					"text" :	"setup/unit7/course7.4.md"
+				},
+				{
+					"title":	"数据管理技术新格局",
+					"text" :	"setup/unit7/course7.5.md"
+				},
+				{
+					"title":	"结构化查询语言SQL",
+					"text" :	"setup/unit7/course7.6.md"
+				}
+				
+			]
+
+		},
+		{
+			"title":	"第15单元：实验课7（SQL数据处理与分析）",
+			"pre":	"pre.sh",
+			"environment": "git",
+			"steps":[
+				{
+					"title":	"实验介绍",
+					"text" :	"setup/lab_7/lab_7.1.md"
+				}			
+			]
+
+		},
+		{
+			"title":	"第16单元：大数据库系统",
+			"pre":	"pre.sh",
+			"environment": "git",
+			"steps":[
+				{
+					"title":	"本单元概况",
+					"text" :	"setup/unit8/course8.1.md"
+				},
+				{
+					"title":	"大数据的基本概念",
+					"text" :	"setup/unit8/course8.2.md"
+				},
+				{
+					"title":	"Hadoop和Spark生态",
+					"text" :	"setup/unit8/course8.3.md"
+				},
+				{
+					"title":	"SQL on Hadoop",
+					"text" :	"setup/unit8/course8.4.md"
+				},
+				{
+					"title":	"大数据系统实例",
+					"text" :	"setup/unit8/course8.5.md"
+				}
+				
+			]
+
+		},
+		{
+			"title":	"第17单元：实验课8（Hadoop数据处理）",
+			"pre":	"pre.sh",
+			"environment": "git",
+			"steps":[
+				{
+					"title":	"实验介绍",
+					"text" :	"setup/lab_8/lab_8.1.md"
+				}			
+			]
+
+		},
+		{
+			"title":	"第18单元：数据科学过程",
+			"pre":	"pre.sh",
+			"environment": "git",
+			"steps":[
+				{
+					"title":	"本单元概况",
+					"text" :	"setup/unit9/course9.1.md"
+				},
+				{
+					"title":	"数据科学过程基础",
+					"text" :	"setup/unit9/course9.2.md"
+				},
+				{
+					"title":	"数据科学工作流",
+					"text" :	"setup/unit9/course9.3.md"
+				}
+				
+			]
+
+		},
+		{
+			"title":	"第19单元：实验课9（Python数据科学过程）",
+			"pre":	"pre.sh",
+			"environment": "git",
+			"steps":[
+				{
+					"title":	"实验介绍",
+					"text" :	"setup/lab_9/lab_9.1.md"
+				}			
+			]
+
+		},
+		{
+			"title":	"第20单元：统计分析原理",
+			"pre":	"pre.sh",
+			"environment": "git",
+			"steps":[
+				{
+					"title":	"本单元概况",
+					"text" :	"setup/unit10/course10.1.md"
+				},
+				{
+					"title":	"数据科学的数学基础",
+					"text" :	"setup/unit10/course10.2.md"
+				},
+				{
+					"title":	"概率统计基础",
+					"text" :	"setup/unit10/course10.3.md"
+				},
+				{
+					"title":	"统计建模：线性回归模型",
+					"text" :	"setup/unit10/course10.4.md"
+				}
+				
+			]
+
+		},
+		{
+			"title":	"第21单元：实验课10（Python统计分析）",
+			"pre":	"pre.sh",
+			"environment": "git",
+			"steps":[
+				{
+					"title":	"实验介绍",
+					"text" :	"setup/lab_10/lab_10.1.md"
+				}			
+			]
+
+		},
+		{
+			"title":	"第22单元：机器学习方法",
+			"pre":	"pre.sh",
+			"environment": "git",
+			"steps":[
+				{
+					"title":	"本单元概况",
+					"text" :	"setup/unit11/course11.1.md"
+				},
+				{
+					"title":	"机器学习的发展历史",
+					"text" :	"setup/unit11/course11.2.md"
+				},
+				{
+					"title":	"机器学习的方法",
+					"text" :	"setup/unit11/course11.3.md"
+				},
+				{
+					"title":	"机器学习的最新发展",
+					"text" :	"setup/unit11/course11.4.md"
+				}
+				
+			]
+
+		},
+		{
+			"title":	"第23单元：实验课11（Python机器学习）",
+			"pre":	"pre.sh",
+			"environment": "git",
+			"steps":[
+				{
+					"title":	"实验介绍",
+					"text" :	"setup/lab_11/lab_11.1.md"
+				}			
+			]
+
+		},
+		{
+			"title":	"第24单元：深度学习",
+			"pre":	"pre.sh",
+			"environment": "git",
+			"steps":[
+				{
+					"title":	"本单元概况",
+					"text" :	"setup/unit12/course12.1.md"
+				},
+				{
+					"title":	"深度学习的介绍",
+					"text" :	"setup/unit12/course12.2.md"
+				},
+				{
+					"title":	"深度学习的拓展",
+					"text" :	"setup/unit12/course12.3.md"
+				},
+				{
+					"title":	"深度学习的应用",
+					"text" :	"setup/unit12/course12.4.md"
+				},
+				{
+					"title":	"深度学习的工具",
+					"text" :	"setup/unit12/course12.5.md"
+				}
+				
+			]
+
+		},
+		{
+			"title":	"第25单元：实验课12（Python深度学习）",
+			"pre":	"pre.sh",
+			"environment": "git",
+			"steps":[
+				{
+					"title":	"实验介绍",
+					"text" :	"setup/lab_12/lab_12.1.md"
+				}			
+			]
+
+		},
+		{
+			"title":	"第26单元：数据挖掘基础",
+			"pre":	"pre.sh",
+			"environment": "git",
+			"steps":[
+				{
+					"title":	"本单元概况",
+					"text" :	"setup/unit13/course13.1.md"
+				},
+				{
+					"title":	"什么是数据挖掘？",
+					"text" :	"setup/unit13/course13.2.md"
+				},
+				{
+					"title":	"数据挖掘标准流程",
+					"text" :	"setup/unit13/course13.3.md"
+				},
+				{
+					"title":	"数据挖掘的技术",
+					"text" :	"setup/unit13/course13.4.md"
+				},
+				{
+					"title":	"大数据挖掘",
+					"text" :	"setup/unit13/course13.5.md"
+				}
+				
+			]
+
+		},
+		{
+			"title":	"第27单元：实验课13（Python异构数据挖掘）",
+			"pre":	"pre.sh",
+			"environment": "git",
+			"steps":[
+				{
+					"title":	"实验介绍",
+					"text" :	"setup/lab_13/lab_13.1.md"
+				}			
+			]
+
+		},
+		{
+			"title":	"第28单元：异构数据挖掘",
+			"pre":	"pre.sh",
+			"environment": "git",
+			"steps":[
+				{
+					"title":	"本单元概况",
+					"text" :	"setup/unit14/course14.1.md"
+				},
+				{
+					"title":	"自然语言处理？",
+					"text" :	"setup/unit14/course14.2.md"
+				},
+				{
+					"title":	"语音信号分析",
+					"text" :	"setup/unit14/course14.3.md"
+				},
+				{
+					"title":	"图像处理与理解",
+					"text" :	"setup/unit14/course14.4.md"
+				}
+				
+			]
+
+		},
+		{
+			"title":	"第29单元：实验课14（Python文本与语音数据挖掘）",
+			"pre":	"pre.sh",
+			"environment": "git",
+			"steps":[
+				{
+					"title":	"实验介绍",
+					"text" :	"setup/lab_14/lab_14.1.md"
+				}			
+			]
+
+		},
+		{
+			"title":	"第30单元：应用综合案例分析",
+			"pre":	"pre.sh",
+			"environment": "git",
+			"steps":[
+				{
+					"title":	"本单元概况",
+					"text" :	"setup/unit15/course15.1.md"
+				},
+				{
+					"title":	"智慧城市",
+					"text" :	"setup/unit15/course15.2.md"
+				},
+				{
+					"title":	"人工智能",
+					"text" :	"setup/unit15/course15.3.md"
+				},
+				{
+					"title":	"计算教育学",
+					"text" :	"setup/unit15/course15.4.md"
+				}
+				
+			]
+
+		},
+		{
+			"title":	"第31单元：实验课15（综合项目实践）",
+			"pre":	"pre.sh",
+			"environment": "git",
+			"steps":[
+				{
+					"title":	"实验介绍",
+					"text" :	"setup/lab_15/lab_15.1.md"
+				}			
+			]
+
+		},
+		{
+			"title":	"第32单元：数据道德与职业行为准则",
+			"pre":	"pre.sh",
+			"environment": "git",
+			"steps":[
+				{
+					"title":	"本单元概况",
+					"text" :	"setup/unit16/course16.1.md"
+				},
+				{
+					"title":	"我们处于一个开放的世界",
+					"text" :	"setup/unit16/course16.2.md"
+				},
+				{
+					"title":	"数据科学职业规划",
+					"text" :	"setup/unit16/course16.3.md"
+				},
+				{
+					"title":	"数据隐私与社会问题",
+					"text" :	"setup/unit16/course16.4.md"
 				}
 				
 			]
 
 		}
-
-	]
-}
